@@ -15,4 +15,30 @@ sudo usermod -aG docker devops
 vi /etc/group
 
 
+Container Lifecycle:
+
+#for Runing Container Interactive mode on centos:
+docker run -it centos:7 /bin/bash
+
+#for show container id on detach mode:
+docker run -itd centos:7 /bin/bash
+
+#for Interactive and name on centos:
+docker run -it --name fano centos:7 top
+
+#Detaching from containers
+ctrl+p+q
+
+#Listing containers
+docker ps -a
+
+#Reattaching to containers
+docker attach CONTAINER ID
+
+#Executing commands inside containers:
+docker exec
+
+
+
+
 
