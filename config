@@ -38,6 +38,15 @@ docker attach CONTAINER ID
 #Executing commands inside containers:
 docker exec
 
+#Enable live-restore
+vim /etc/docker/deamon.json
+{
+"live-restore": true
+}
+
+systemctl reload docker
+systemctl status docker: active (running)
+docker info :Live Restore Enabled: true
 
 
 
