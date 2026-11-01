@@ -1,0 +1,12 @@
+##Add limitation on resource host
+
+#MEMORY
+docker run -itd --name c1 -m 500M centos:7 
+
+#SWAP
+docker run -itd --name c1 -m 400M --memory-swap 1G centos:7 (--memory-swap 1G means memory+swap=1G , swap=600)
+docker run -itd --name c2 -m 400M --memory-swap -1 centos:7 (--memory-swap -1 means memory+swap=NO LIMIT)
+
+#CPU
+
+
