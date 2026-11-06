@@ -32,11 +32,12 @@ ctrl+p+q
 #Listing containers
 docker ps -a
 
-#Reattaching to containers
-docker attach CONTAINER ID
+#Reattaching to standard input, output , errors containers:
+docker attach CONTAINER-ID or NAME
 
-#Executing commands inside containers:
-docker exec
+#Executing commands inside running containers:
+docker exec CONTAINER-IR OR NAME
+*example: docker exec c1 ls/var
 
 #Enable live-restore
 vim /etc/docker/deamon.json
