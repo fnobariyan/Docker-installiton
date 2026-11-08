@@ -1,0 +1,10 @@
+#Show container's log
+ docker log CONTAINER-ID or NAME
+
+#Follow output log
+ docker -f log CONTAINER-ID or NAME
+
+#Follow log + timestamp
+ docker -ft log CONTAINER-ID or NAME
+
+
