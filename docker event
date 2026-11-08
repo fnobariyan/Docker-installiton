@@ -1,0 +1,6 @@
+docker event --since"2026/8/11T3:09:18"
+docker event --until"2026/8/11T3:09:18"
+docker event --since"20m"
+docker event --filter"event=stop"
+docker event --filter"type=network"
+
