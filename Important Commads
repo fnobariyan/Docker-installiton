@@ -22,4 +22,6 @@
 #Kill
  docker kill CONTAINER-NAME
 
+**Stopping a container does not erase its data; it is only deleted when the container itself is deleted.**
+
   
