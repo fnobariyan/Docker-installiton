@@ -1,0 +1,25 @@
+#Copying a file or dir from docker-host to cantainer: (ATTENTION to ownership)
+ docker cp FILE-NAME CONTAINER-NAME:DESTATION-PATH
+(docker exec -it cont2 chmod +x /home/myscript.sh)
+
+#Copying a file or dir from container to docker-host:
+ docker cp CONTAINER-NAME:SOURCE-PATH DESTATION-PATH   
+
+#Stop one or more containers
+ docker stop CONTAINER-NAME
+ docker stop -t 20 CONTAINER-NAME : (20 seconds to stop before killing the container)
+*NOTE: the main process inside the container will recive SIGTERM,and after the a period, SIGKILL.*
+
+#Start
+ docker start -a CONTAINER-NAME (attach to standard output and error)
+ docker start -i CONTAINER-NAME (attach to standard input and error)
+ docker start -ai CONTAINER-NAME (attach to standard input output and error)
+**docker start -ai = docker start -a & docker attach
+
+#Restart
+ docker restart -t 20 CONTAINER-NAME
+
+#Kill
+ docker kill CONTAINER-NAME
+
+  
