@@ -1,0 +1,8 @@
+#Craet a new image from cantainer's changes:
+  docker commit [OPTION] CONTAINER-NAME [REPOSITORY:[TAG]]
+
+#Creat a zip file of docker image
+  docker save -o NAME-OF-ZIP.tar.gz CONTAINER-NAME
+
+#Runnig a .tar.gz file as a image
+  docker load < NAME.tar.gz 
