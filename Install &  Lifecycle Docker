@@ -38,6 +38,7 @@ docker attach CONTAINER-ID or NAME
 #Executing commands inside running containers:
 docker exec CONTAINER-IR OR NAME
 *example: docker exec c1 ls/var
+*example: docker exec c1 bash
 
 #Enable live-restore
 vim /etc/docker/deamon.json
