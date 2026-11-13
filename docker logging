@@ -1,0 +1,38 @@
+#Show container's log
+ docker log CONTAINER-ID or NAME
+
+#Follow output log
+ docker -f log CONTAINER-ID or NAME
+
+#Follow log + timestamp
+ docker -ft log CONTAINER-ID or NAME
+
+#Add option
+ docker -ft log --since"2026/8/11T3:09:18"
+ docker -ft log --until"2026/8/11T3:09:18"
+
+#Show docker host log driver:
+docker info --format '{{.LoggingDriver}}'
+
+#Show container's log driver:
+ docker inspect -f '{{.HostConfig.LogConfig.Type}}' CONTAINER-ID or NAME
+json-file
+
+#Show container's log driver mode(bloking or non-blocking):
+ docker inspect -f '{{.HostConfig.LogConfig.Config}}' CONTAINER-ID or NAME
+non-blocking
+
+
+#Change log driver (in Docker Host globaly for all containers)
+vi /etc/docker/daemon.jason
+{
+ "log-driver:jason-file"
+}
+(jason-file is defult log driver)
+
+#Change models for delivering messages from container to log driver(and set limit for buffer):
+ docker run -itd -- name test --log-opt mode=non-blocking --log-opt max-buffer-size=10m ubuntu
+
+
+
+
