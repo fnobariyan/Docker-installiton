@@ -6,3 +6,7 @@
 
 #Runnig a .tar.gz file as a image
   docker load < NAME.tar.gz 
+
+docker export
+docker import
+
